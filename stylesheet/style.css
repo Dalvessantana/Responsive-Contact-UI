@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background: #c8e8e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 80%;
+    background: #fff;
+    border-radius: 6px;
+    padding: 30px 60px 40px 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .content .proximo-slide {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15px;
+    position: relative;
+}
+
+.content .proximo-slide::before {
+    content: '';
+    position: absolute;
+    height: 70%;
+    width: 2px;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #afadb6;
+}
+
+.content .proximo-slide .details {
+    margin: 14px;
+    text-align: center;
+}
+
+.content .proximo-slide .details i {
+    font-size: 35px;
+    color: #3e2093;
+    margin-bottom: 10px;
+}
+
+.content .proximo-slide .details .topic {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.content .proximo-slide .details .text-um,
+.content .proximo-slide .details .text-dois {
+    font-size: 14px;
+    color: #afafb6;
+}
+
+.container .content .rigth-side {
+    width: 75%;
+    margin-left: 75px;
+}
+
+.content .rigth-side .topic-text {
+    font-size: 23px;
+    font-weight: 600;
+    color: #3e2093;
+}
+
+.rigth-side .input-box {
+    height: 50px;
+    width: 100%;
+    margin: 12px 0;
+}
+
+.rigth-side .input-box input,
+.rigth-side .input-box textarea {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    background: #f0f1f8;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+
+.rigth-side .message-box {
+    min-height: 110px;
+    margin-top: 6px;
+}
+
+.rigth-side .button {
+    display: inline-block;
+    margin-top: 0px;
+}
+
+.rigth-side .button input[type="button"] {
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: #3e2093;
+    transition: all 0.3s ease;
+}
+
+.button input[type="button"]:hover {
+    background: #5029bc;
+}
+
+
+@media (max-width: 950px) {
+    .container {
+        width: 90%;
+        padding: 30px 35px 40px 35px;
+
+    }
+}
+
+@media (max-width: 950px) {
+    .container {
+        margin: 40px 0;
+        height: 100%;
+    }
+    .container .content{
+        flex-direction: column-reverse;
+    }
+    .container .content .proximo-slide{
+        width: 100%;
+        flex-direction: row;
+        margin-top: 40px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .container .content .proximo-slide::before{
+        display: none;
+    }
+    .container .content .rigth-side{
+        width: 100%;
+        margin-left: 0;
+    }
+}
